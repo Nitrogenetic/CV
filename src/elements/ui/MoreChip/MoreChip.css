@@ -1,0 +1,11 @@
+.more-chip {
+	@apply inline-flex justify-center items-center rounded-50;
+
+	&-primary {
+		@apply bg-neutral-6 text-neutral-1;
+	}
+
+	&-neutral {
+		@apply bg-neutral-2 text-neutral-5;
+	}
+}

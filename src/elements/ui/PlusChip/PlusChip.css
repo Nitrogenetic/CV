@@ -1,0 +1,6 @@
+.plus-chip {
+    @apply
+        rounded-full border-dashed border-neutral-4 border
+        flex justify-center items-center cursor-pointer
+        transition-border-style duration-150 hover:border-solid;
+}

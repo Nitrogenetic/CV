@@ -1,0 +1,10 @@
+.avatar-chip {
+	@apply inline-flex justify-center items-center text-neutral-1 bg-violet-3 rounded-50 relative;
+
+	&-ringed {
+		@apply ring ring-transparent
+	}
+	&-outlined {
+		@apply ring-offset ring-offset-neutral-7;
+	}
+}

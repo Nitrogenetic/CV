@@ -1,0 +1,12 @@
+.trigger {
+	@apply
+		flex items-center px-12 py-20 w-165 h-36 mt-16 rounded-8 cursor-pointer transition;
+
+	&-neutral {
+		@apply text-violet-3;
+	}
+
+	&-light {
+		@apply text-violet-2;
+	}
+}

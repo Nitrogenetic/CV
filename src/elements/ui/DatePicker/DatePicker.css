@@ -1,0 +1,58 @@
+.date-picker {
+  @apply py-18 border rounded-8 shadow-drop;
+
+  &-primary {
+    @apply bg-white shadow-popover;
+  }
+}
+
+.date-picker-day {
+  @apply flex items-center justify-center py-2 px-8 cursor-pointer select-none rounded-6 text-14 transition-colors;
+
+  &-primary {
+    @apply text-gray-100 hover:bg-violet-1;
+
+    &-today {
+      @apply bg-violet-3;
+    }
+
+    &-select {
+      @apply bg-violet-2;
+    }
+
+    &-disabled {
+      @apply text-gray-60;
+    }
+
+    &-range {
+      @apply bg-violet-1;
+    }
+
+    &-out {
+      @apply text-neutral-5;
+    }
+  }
+}
+
+.date-picker-header {
+  @apply relative flex items-center justify-between pb-18 px-16 font-bold text-14;
+
+  &-primary {
+    @apply text-gray-100;
+  }
+}
+
+.date-picker-days {
+  @apply grid grid-cols-7 gap-3 px-16;
+
+  &-primary {
+  }
+}
+
+.date-picker-label {
+  @apply text-center text-12 font-extrabold;
+
+  &-primary {
+    @apply text-gray-100;
+  }
+}

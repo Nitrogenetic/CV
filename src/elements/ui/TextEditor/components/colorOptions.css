@@ -1,0 +1,7 @@
+.color-select .ql-picker {
+  @apply !self-center !flex !items-center !justify-center !rounded-8 !h-40 !w-40 !cursor-pointer !hover:bg-gray-30;
+}
+
+.color-select .ql-picker-label {
+  @apply !border-0 !p-10;
+}

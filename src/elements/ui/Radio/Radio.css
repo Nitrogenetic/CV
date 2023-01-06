@@ -1,0 +1,28 @@
+.wrapper {
+  @apply inline-flex items-center cursor-pointer;
+
+  &-outlined {
+    @apply flex p-16 border border-solid rounded-8 mb-8;
+
+    &-violet {
+      @apply border-neutral-2 bg-white;
+
+      &-checked {
+        @apply border-violet-3.5 bg-neutral-1.25;
+      }
+    }
+  }
+}
+.radio {
+  @apply w-16 h-16 flex items-center justify-center border-2
+		rounded-50 transition-colors hover:bg-neutral-2
+		bg-neutral-1 border-gray-70;
+
+  &-white {
+    @apply border-neutral-8;
+  }
+
+  &-checked {
+    @apply bg-violet-3 border-violet-3;
+  }
+}
