@@ -11,7 +11,6 @@ const SkillsBlockTitle: React.FC<SkillsBlockTitleProps> = (props) => {
   const { scroll, screenHeight } = props;
   const currentScroll = scroll - screenHeight;
   const display = currentScroll / screenHeight >= 3 ? 'none' : '';
-  console.log('currentScroll: ', currentScroll / screenHeight >= 3);
 
   return (
     <div

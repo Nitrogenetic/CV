@@ -9,9 +9,6 @@
   color-scheme: light dark;
   color: black;
   background-color: white;
-  /* background-image: url('/static/images/background.webp');
-  background-repeat: no-repeat;
-  background-size: contain; */
 }
 
 * {
@@ -37,8 +34,35 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* 
-.cursor-meteor {
-  cursor: url('/static/images/cursor-meteor.png'),
-    url('/static/images/cursor-meteor.cur'), auto;
-} */
+
+@keyframes running-string1 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-63.5vw, 0);
+  }
+}
+
+@keyframes running-string2 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-83vw, 0);
+  }
+}
+
+.projects-running-string1 {
+  user-select: none;
+  font-size: 4vw;
+  white-space: nowrap;
+  animation: running-string1 7s linear infinite;
+}
+
+.projects-running-string2 {
+  user-select: none;
+  font-size: 4vw;
+  white-space: nowrap;
+  animation: running-string2 7s linear infinite;
+}
