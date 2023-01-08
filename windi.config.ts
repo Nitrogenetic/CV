@@ -120,9 +120,9 @@ export default defineConfig({
         auto: 'auto',
       },
       backgroundImage: () => ({
-        banner: 'url("/static/images/background.webp")',
-        skills: 'url("/static/images/the-earth.webp")',
-        meteors: 'url("/static/images/meteors.webp")',
+        banner: 'url("src/assets/images/background.webp")',
+        skills: 'url("src/assets/images/the-earth.webp")',
+        meteors: 'url("src/assets/images/meteors.webp")',
       }),
     },
   },

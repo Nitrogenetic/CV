@@ -1,8 +1,8 @@
-import astronaut1 from '../../../../../../static/images/astronaut1.png';
-import astronaut2 from '../../../../../../static/images/astronaut2.png';
-import astronaut3 from '../../../../../../static/images/astronaut3.png';
-import astronaut4 from '../../../../../../static/images/astronaut4.png';
-import astronaut5 from '../../../../../../static/images/astronaut5.png';
+import astronaut1 from '../../../../../assets/images/astronaut1.png';
+import astronaut2 from '../../../../../assets/images/astronaut2.png';
+import astronaut3 from '../../../../../assets/images/astronaut3.png';
+import astronaut4 from '../../../../../assets/images/astronaut4.png';
+import astronaut5 from '../../../../../assets/images/astronaut5.png';
 
 interface SkillsBlockAstronautsProps {
   type?:

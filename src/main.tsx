@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import '/static/styles/app.css';
+import './assets/styles/app.css';
 import 'virtual:windi.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
