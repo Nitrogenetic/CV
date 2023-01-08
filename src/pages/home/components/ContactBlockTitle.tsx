@@ -6,24 +6,25 @@ import { SelfPrintingPhrase } from '../../../elements/ux/SelfPrintingPhrase';
 interface ProjectsBlockTitleProps extends RouteComponentProps {
   scroll: number;
   screenHeight: number;
+  prevBlockHeight: number;
 }
 
 const ProjectsBlockTitle: React.FC<ProjectsBlockTitleProps> = (props) => {
-  const { scroll, screenHeight } = props;
-  const currentScroll = scroll - screenHeight * 6 + 1;
-  const position = currentScroll >= 0 ? 'fixed' : 'relative';
-  const top = currentScroll >= 0 ? 0 : '';
-  const isHidden = currentScroll / screenHeight >= 3;
+  const { scroll, screenHeight, prevBlockHeight } = props;
+  const currentScroll = scroll - screenHeight * 8 - prevBlockHeight + 1;
+  console.log('currentScroll: ', currentScroll);
+  const opacity = 3 - currentScroll / screenHeight;
+  const isHidden = currentScroll < 0 || currentScroll / screenHeight >= 3;
   const display = isHidden ? 'none' : '';
 
   return (
     <div
-      className="h-screen w-screen z-3 top-600vh bg-white cursor-auto select-none"
-      style={{ position, top, display }}
+      className="h-screen w-screen fixed z-0 top-0 bg-white cursor-auto select-none"
+      style={{ display, opacity }}
     >
       <div className="text-4vw font-bold absolute-center whitespace-nowrap">
         <SelfPrintingPhrase
-          string="import { PastProjects } from 'career'"
+          string="const myContacts = new Map()"
           howMuchFullScreensAnimationTakes={2}
           screenHeight={screenHeight}
           scrollY={currentScroll}

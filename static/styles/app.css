@@ -66,3 +66,7 @@
   white-space: nowrap;
   animation: running-string2 7s linear infinite;
 }
+
+.hidden {
+  display: none;
+}

@@ -28,7 +28,7 @@ const SelfPrintingPhrase: FC<SelfPrintingPhraseProps> = memo((props) => {
         (lettersArray.length + 18);
       const phraseWithoutSticks = lettersArray.map((letter, index) => {
         return (
-          <>
+          <span key={index}>
             <span
               className={cls(
                 { hidden: scrollY <= step * (index + 12) },
@@ -50,11 +50,12 @@ const SelfPrintingPhrase: FC<SelfPrintingPhraseProps> = memo((props) => {
             >
               |
             </span>
-          </>
+          </span>
         );
       });
       const startingSticks = [
         <span
+          key={'starting-sticks1'}
           className={cls(
             'select-none',
             {
@@ -66,6 +67,7 @@ const SelfPrintingPhrase: FC<SelfPrintingPhraseProps> = memo((props) => {
           |
         </span>,
         <span
+          key={'starting-sticks2'}
           className={cls(
             'select-none',
             {
@@ -77,6 +79,7 @@ const SelfPrintingPhrase: FC<SelfPrintingPhraseProps> = memo((props) => {
           |
         </span>,
         <span
+          key={'starting-sticks3'}
           className={cls(
             'select-none',
             {
@@ -90,6 +93,7 @@ const SelfPrintingPhrase: FC<SelfPrintingPhraseProps> = memo((props) => {
       ];
       const finishingSticks = [
         <span
+          key={'finishing-sticks1'}
           className={cls(
             'select-none',
             {
@@ -103,6 +107,7 @@ const SelfPrintingPhrase: FC<SelfPrintingPhraseProps> = memo((props) => {
           |
         </span>,
         <span
+          key={'finishing-sticks2'}
           className={cls(
             'select-none',
             { hidden: scrollY <= step * (lettersArray.length + 18) },
@@ -117,6 +122,7 @@ const SelfPrintingPhrase: FC<SelfPrintingPhraseProps> = memo((props) => {
     return lettersArray.map((letter, index) => {
       return (
         <span
+          key={index}
           className={cls(
             { hidden: scrollY <= step * (index + 1) },
             { inline: scrollY > step * (index + 1) }

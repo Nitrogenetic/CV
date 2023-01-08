@@ -34,7 +34,7 @@ const SwiperParallax: FC<SwiperParallaxProps> = memo((props) => {
             'parallax-bg absolute bg-cover bg-no-repeat w-100vw h-full'
           }
           style={{
-            backgroundImage: bg,
+            backgroundImage: bg || 'none',
           }}
           data-swiper-parallax="-25%"
         />
@@ -44,30 +44,6 @@ const SwiperParallax: FC<SwiperParallaxProps> = memo((props) => {
         <div className="swiper-button-next w-7vw h-7vw bg-red-100 text-transparent">
           2
         </div>
-        {slides.map((slide) => {
-          return (
-            <SwiperSlide className={'p-3vw'}>
-              <div
-                className={'title text-7vw font-extralight mb-6vw'}
-                data-swiper-parallax="-300"
-              >
-                {slide?.title}
-              </div>
-              {/* <div
-                className={'subtitle text-5vw font-light mb-1vw'}
-                data-swiper-parallax="-200"
-              >
-                {slide?.subtitle}
-              </div> */}
-              <div
-                className={'text text-2vw font-light px-6vw'}
-                data-swiper-parallax="-100"
-              >
-                <p>{slide?.text}</p>
-              </div>
-            </SwiperSlide>
-          );
-        })}
       </Swiper>
     </>
   );

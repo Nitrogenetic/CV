@@ -69,11 +69,10 @@ const SkillsBlock: React.FC<SkillsBlockProps> = (props) => {
             <SkillsBlockAstronauts type="compiler" />
           </div>
           <div className="flex flex-col">
-            <p className="px-1vw py-2vw text-2.5vw text-[#ffffff] text-opacity-87 text-shadow-xl hover:text-blue-100">
+            <p className="px-1vw py-2vw text-2.5vw text-[#ffffff] text-opacity-87 text-shadow-xl hover:(text-blue-100 sibling:translate-x-50vw)">
               Builders
             </p>
-            <p>Webpack</p>
-            <p>Vite</p>
+            <SkillsBlockAstronauts type="builders" />
           </div>
         </div>
 
@@ -82,8 +81,8 @@ const SkillsBlock: React.FC<SkillsBlockProps> = (props) => {
             Other knowledge
           </p>
           <div className="transition-opacity duration-500 opacity-0">
-            protocols, http, headers, git, npm, yarn, tokens, uuid, cache and
-            more
+            protocols, http, headers, git, npm, yarn, tokens, uuid, cache,
+            websockets, queries, ajax post/get and more...
           </div>
         </div>
       </div>

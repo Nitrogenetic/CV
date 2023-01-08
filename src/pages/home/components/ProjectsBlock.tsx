@@ -1,20 +1,29 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect, useRef } from 'react';
 import { RouteComponentProps } from '@reach/router';
 
 interface ProjectsBlockProps extends RouteComponentProps {
   scroll: number;
   screenHeight: number;
+  setProjectsBlockHeight(value: number): void;
 }
 
 const ProjectsBlock: React.FC<ProjectsBlockProps> = (props) => {
-  const { scroll, screenHeight } = props;
+  const { scroll, screenHeight, setProjectsBlockHeight } = props;
   const currentScroll = scroll - screenHeight * 9;
   const screenStep = currentScroll / screenHeight;
   const opacity = screenStep + 1;
+  const projectsBlockRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    projectsBlockRef?.current &&
+      setProjectsBlockHeight(projectsBlockRef.current.offsetHeight);
+  }, [projectsBlockRef, scroll]);
+  // }, [projectsBlockRef]); //если лагает раскоментить
 
   return (
     <div
-      className="h-fit w-screen absolute z-3 top-800vh pt-200vh bg-white cursor-auto pt-30vw overflow-hidden"
+      className="h-fit w-screen relative z-3 top-800vh pt-200vh bg-white cursor-auto overflow-hidden"
+      ref={projectsBlockRef}
       style={{ opacity }}
     >
       <div className="pl-10vw pr-3vw grid grid-cols-2 gap-x-7vw text-3vw text-center mb-7vw">

@@ -14,12 +14,12 @@ const SkillsBlockTitle: React.FC<SkillsBlockTitleProps> = (props) => {
 
   return (
     <div
-      className="h-screen w-screen fixed z-0 bg-white bg-cover bg-no-repeat cursor-auto p-2vw"
+      className="h-screen w-screen fixed z-0 bg-white bg-cover bg-no-repeat cursor-auto select-none"
       style={{ display }}
     >
       <div className="text-4vw font-bold absolute-center whitespace-nowrap">
         <SelfPrintingPhrase
-          string="const myPersonalSkills = () = > {"
+          string="const myPersonalSkills = () = > {}"
           howMuchFullScreensAnimationTakes={2}
           screenHeight={screenHeight}
           scrollY={currentScroll}

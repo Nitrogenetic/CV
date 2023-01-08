@@ -78,6 +78,19 @@ const SkillsBlockAstronauts: React.FC<SkillsBlockAstronautsProps> = (props) => {
           />
         </div>
       );
+    case 'builders':
+      return (
+        <div className="fixed top-60vh right-100vw transform duration-700">
+          <div className="w-30vw h-12vw z-1 bg-white rounded-10 relative z-0 pl-5vw flex flex-col justify-center text-4vw text-black">
+            <p>Webpack</p>
+            <p>Vite</p>
+          </div>
+          <img
+            src={astronaut5}
+            className="bg-red-00 w-20vw h-auto absolute top-0vw right-25.5vw z-1"
+          />
+        </div>
+      );
   }
 
   return <></>;

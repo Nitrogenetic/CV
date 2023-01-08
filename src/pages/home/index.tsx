@@ -1,7 +1,8 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import { navigate, RouteComponentProps } from '@reach/router';
 import {
   ContactBlock,
+  ContactBlockTitle,
   HeaderBlock,
   ProjectsBlock,
   ProjectsBlockTitle,
@@ -15,17 +16,31 @@ interface HomeProps extends RouteComponentProps {}
 const Home: React.FC<HomeProps> = () => {
   const { y: scroll } = useWindowScroll();
   const { height: screenHeight } = useWindowSize();
+
+  const [projectsBlockHeight, setProjectsBlockHeight] = useState<number>();
+
   // console.log('scroll: ', scroll);
 
   return (
-    <div className="h-1000vh">
+    <div className="h-1600vh">
       <HeaderBlock scroll={scroll} screenHeight={screenHeight} />
+
       <SkillsBlockTitle scroll={scroll} screenHeight={screenHeight} />
       <SkillsBlock scroll={scroll} screenHeight={screenHeight} />
-      {/* Information and projects */}
+
       <ProjectsBlockTitle scroll={scroll} screenHeight={screenHeight} />
-      <ProjectsBlock scroll={scroll} screenHeight={screenHeight} />
-      {/* <ContactBlock /> */}
+      <ProjectsBlock
+        scroll={scroll}
+        screenHeight={screenHeight}
+        setProjectsBlockHeight={(value) => setProjectsBlockHeight(value)}
+      />
+
+      <ContactBlockTitle
+        scroll={scroll}
+        screenHeight={screenHeight}
+        prevBlockHeight={projectsBlockHeight || 0}
+      />
+      <ContactBlock />
     </div>
   );
 };

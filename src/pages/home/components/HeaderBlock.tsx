@@ -21,7 +21,7 @@ const HeaderBlock: React.FC<HeaderBlockProps> = (props) => {
       {display !== 'none' && (
         <AnimatedCursor
           innerSize={'15vw'}
-          outerSize={'0'}
+          outerSize={0}
           innerScale={4}
           innerStyle={{
             backgroundColor: 'white',
