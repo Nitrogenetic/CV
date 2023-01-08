@@ -1,7 +1,6 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import React3dEarth from 'react-3d-earth';
-import cls from 'classnames';
 
 interface ContactBlockProps extends RouteComponentProps {}
 

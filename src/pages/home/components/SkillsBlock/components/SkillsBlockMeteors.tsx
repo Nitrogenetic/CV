@@ -1,8 +1,8 @@
-import meteor1 from '/static/images/meteor1.png';
-import meteor2 from '/static/images/meteor2.png';
-import meteor3 from '/static/images/meteor3.png';
-import meteor4 from '/static/images/meteor4.png';
-import meteor5 from '/static/images/meteor5.png';
+import meteor1 from '../../../../../../static/images/meteor1.png';
+import meteor2 from '../../../../../../static/images/meteor2.png';
+import meteor3 from '../../../../../../static/images/meteor3.png';
+import meteor4 from '../../../../../../static/images/meteor4.png';
+import meteor5 from '../../../../../../static/images/meteor5.png';
 
 interface SkillsBlockMeteorsProps {
   currentScroll: number;
