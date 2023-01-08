@@ -38,10 +38,10 @@ const SkillsBlock: React.FC<SkillsBlockProps> = (props) => {
         />
       )}
       <SkillsBlockMeteors currentScroll={currentScroll} />
-      <div className="h-screen w-screen fixed z-1 bg-meteors bg-no-repeat bg-cover bg-center" />
+      <div className="h-screen w-screen fixed z-1 bg-no-repeat bg-cover bg-center" />
       <div
         className="h-screen w-screen absolute z-3 top-500vh px-2vw overflow-x-hidden select-none"
-        style={{ display }}
+        style={{ display, backgroundImage: 'url("images/meteors.png")' }}
       >
         <div className="flex justify-between mb-20vw">
           <div className="h-fit">

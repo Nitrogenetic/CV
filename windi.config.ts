@@ -119,11 +119,7 @@ export default defineConfig({
         inherit: 'inherit',
         auto: 'auto',
       },
-      backgroundImage: () => ({
-        banner: 'url("src/assets/images/background.webp")',
-        skills: 'url("src/assets/images/the-earth.webp")',
-        meteors: 'url("src/assets/images/meteors.webp")',
-      }),
+      backgroundImage: () => ({}),
     },
   },
   plugins: [formsPlugin],

@@ -1,8 +1,8 @@
-import astronaut1 from '../../../../../assets/images/astronaut1.png';
-import astronaut2 from '../../../../../assets/images/astronaut2.png';
-import astronaut3 from '../../../../../assets/images/astronaut3.png';
-import astronaut4 from '../../../../../assets/images/astronaut4.png';
-import astronaut5 from '../../../../../assets/images/astronaut5.png';
+// import astronaut1 from '../../../../../assets/images/astronaut1.png';
+// import astronaut2 from '../../../../../assets/images/astronaut2.png';
+// import astronaut3 from '../../../../../assets/images/astronaut3.png';
+// import astronaut4 from '../../../../../assets/images/astronaut4.png';
+// import astronaut5 from '../../../../../assets/images/astronaut5.png';
 
 interface SkillsBlockAstronautsProps {
   type?:
@@ -30,7 +30,7 @@ const SkillsBlockAstronauts: React.FC<SkillsBlockAstronautsProps> = (props) => {
             <p>PHP</p>
           </div>
           <img
-            src={astronaut1}
+            src={'images/astronaut1.png'}
             className="w-20vw h-auto absolute top-25vw right-25vw z-1"
           />
         </div>
@@ -43,7 +43,7 @@ const SkillsBlockAstronauts: React.FC<SkillsBlockAstronautsProps> = (props) => {
             <p>SQL</p>
           </div>
           <img
-            src={astronaut2}
+            src={'images/astronaut2.png'}
             className="bg-red-00 w-20vw h-auto absolute top-4vw left-29.2vw z-1"
           />
         </div>
@@ -61,7 +61,7 @@ const SkillsBlockAstronauts: React.FC<SkillsBlockAstronautsProps> = (props) => {
             <p>jQuery</p>
           </div>
           <img
-            src={astronaut4}
+            src={'images/astronaut4.png'}
             className="bg-red-00 w-20vw h-auto absolute top-12vw right-21.5vw z-0"
           />
         </div>
@@ -73,7 +73,7 @@ const SkillsBlockAstronauts: React.FC<SkillsBlockAstronautsProps> = (props) => {
             <p>Node.js</p>
           </div>
           <img
-            src={astronaut3}
+            src={'images/astronaut3.png'}
             className="bg-red-00 w-20vw h-auto absolute top-1.5vw left-7vw z-1"
           />
         </div>
@@ -86,7 +86,7 @@ const SkillsBlockAstronauts: React.FC<SkillsBlockAstronautsProps> = (props) => {
             <p>Vite</p>
           </div>
           <img
-            src={astronaut5}
+            src={'images/astronaut5.png'}
             className="bg-red-00 w-20vw h-auto absolute top-0vw right-25.5vw z-1"
           />
         </div>

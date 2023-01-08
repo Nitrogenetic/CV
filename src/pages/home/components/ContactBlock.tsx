@@ -22,7 +22,7 @@ const ContactBlock: React.FC<ContactBlockProps> = (props) => {
 
           <div className="flex items-center">
             <span className="mr-4vw">Personal Photo:</span>
-            <img src="/static/images/vladislav.png" className="w-10vw" />
+            <img src="images/vladislav.png" className="w-10vw" />
           </div>
         </div>
 
@@ -73,6 +73,7 @@ const ContactBlock: React.FC<ContactBlockProps> = (props) => {
           dotColor: 'white',
           autoRotationSpeed: 0.15,
           draggingRotationSpeed: 3,
+          backgroundColor: '#0d173b',
           // textureSrc: '/images/map.png',
         }}
       />

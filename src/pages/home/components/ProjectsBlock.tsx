@@ -1,8 +1,8 @@
-import codeFalco from '../../../assets/images/code-falco.png';
-import codeTvc from '../../../assets/images/code-tvc.png';
-import codeHomecooks from '../../../assets/images/code-homecooks.png';
-import codeCoffee from '../../../assets/images/code-coffee.png';
-import codeBrightlab from '../../../assets/images/code-brightlab.png';
+// import codeFalco from 'public/images/code-falco.png';
+// import codeTvc from 'public/images/code-tvc.png';
+// import codeHomecooks from 'public/images/code-homecooks.png';
+// import codeCoffee from 'public/images/code-coffee.png';
+// import codeBrightlab from 'public/images/code-brightlab.png';
 
 import React, { memo, useEffect, useRef } from 'react';
 import { RouteComponentProps } from '@reach/router';
@@ -56,7 +56,10 @@ const ProjectsBlock: React.FC<ProjectsBlockProps> = (props) => {
           Falco was abandoned. But the project continues to develop to this day.
           A full release has not been launched yet.
         </p>
-        <img src={codeFalco} className="w-full h-auto rounded-1vw" />
+        <img
+          src={'images/code-falco.png'}
+          className="w-full h-auto rounded-1vw"
+        />
 
         <p className="py-4vw border-t-2 border-black">
           TVC (employees only) - an internal media storage site for employees of
@@ -65,7 +68,10 @@ const ProjectsBlock: React.FC<ProjectsBlockProps> = (props) => {
           September 2021, transferred the project to another developer at the
           end of June 2022.
         </p>
-        <img src={codeTvc} className="w-full h-auto rounded-1vw" />
+        <img
+          src={'images/code-tvc.png'}
+          className="w-full h-auto rounded-1vw"
+        />
 
         <p className="py-4vw border-y-2 border-black">
           <a
@@ -80,7 +86,10 @@ const ProjectsBlock: React.FC<ProjectsBlockProps> = (props) => {
           with home delivery. I worked on building the site from July to
           November 2021.
         </p>
-        <img src={codeHomecooks} className="w-full h-auto rounded-1vw" />
+        <img
+          src={'images/code-homecooks.png'}
+          className="w-full h-auto rounded-1vw"
+        />
       </div>
       <p className="projects-running-string2 mb-7vw">
         Projects in which I made my own decisions &mdash; Projects in which I
@@ -95,7 +104,10 @@ const ProjectsBlock: React.FC<ProjectsBlockProps> = (props) => {
           changes I made were in january 2022. The website domain is currently
           invalid for an unknown reason.
         </p>
-        <img src={codeCoffee} className="w-full h-auto rounded-1vw" />
+        <img
+          src={'images/code-coffee.png'}
+          className="w-full h-auto rounded-1vw"
+        />
 
         <p className="py-4vw border-y-2 border-black">
           <a
@@ -109,7 +121,10 @@ const ProjectsBlock: React.FC<ProjectsBlockProps> = (props) => {
           when there were no tasks for major projects like Falco and TVC. I made
           changes periodically from March to December 2022.
         </p>
-        <img src={codeBrightlab} className="w-full h-auto rounded-1vw" />
+        <img
+          src={'images/code-brightlab.png'}
+          className="w-full h-auto rounded-1vw"
+        />
       </div>
     </div>
   );

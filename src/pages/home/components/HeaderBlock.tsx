@@ -15,8 +15,12 @@ const HeaderBlock: React.FC<HeaderBlockProps> = (props) => {
 
   return (
     <div
-      className="h-screen w-screen fixed z-10 bg-banner bg-cover bg-no-repeat select-none cursor-none"
-      style={{ opacity, display }}
+      className="h-screen w-screen fixed z-10 bg-cover bg-no-repeat select-none cursor-none"
+      style={{
+        opacity,
+        display,
+        backgroundImage: 'url("images/background.png")',
+      }}
     >
       {display !== 'none' && (
         <AnimatedCursor
