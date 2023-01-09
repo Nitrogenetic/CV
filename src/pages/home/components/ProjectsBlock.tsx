@@ -28,7 +28,7 @@ const ProjectsBlock: React.FC<ProjectsBlockProps> = (props) => {
 
   return (
     <div
-      className="h-fit max-w-screen w-screen relative z-3 top-800vh pt-200vh bg-white cursor-auto overflow-hidden"
+      className="h-fit max-w-full w-screen relative z-3 top-800vh pt-200vh bg-white cursor-auto overflow-hidden"
       ref={projectsBlockRef}
       style={{ opacity }}
     >
