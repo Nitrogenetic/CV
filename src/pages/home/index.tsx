@@ -15,10 +15,20 @@ interface HomeProps extends RouteComponentProps {}
 
 const Home: React.FC<HomeProps> = () => {
   const { y: scroll } = useWindowScroll();
-  const { height: screenHeight } = useWindowSize();
-
+  const { height: screenHeight, width: screenWidth } = useWindowSize();
+  const isMobile = screenWidth <= 576;
+  console.log('isMobile: ', isMobile);
   const [projectsBlockHeight, setProjectsBlockHeight] = useState<number>();
 
+  if (isMobile) {
+    return (
+      <div className="bg white absolute-center text-center w-full">
+        Oh no... <br />
+        My resume is only available for the desktop version so far <br />
+        But I'm already working on a mobile version
+      </div>
+    );
+  }
   // console.log('scroll: ', scroll);
 
   return (
