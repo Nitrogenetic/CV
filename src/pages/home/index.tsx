@@ -17,7 +17,6 @@ const Home: React.FC<HomeProps> = () => {
   const { y: scroll } = useWindowScroll();
   const { height: screenHeight, width: screenWidth } = useWindowSize();
   const isMobile = screenWidth <= 576;
-  console.log('isMobile: ', isMobile);
   const [projectsBlockHeight, setProjectsBlockHeight] = useState<number>();
 
   if (isMobile) {
@@ -29,7 +28,6 @@ const Home: React.FC<HomeProps> = () => {
       </div>
     );
   }
-  // console.log('scroll: ', scroll);
 
   return (
     <div className="h-1600vh">

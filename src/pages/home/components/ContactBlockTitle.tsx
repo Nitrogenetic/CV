@@ -12,7 +12,6 @@ interface ProjectsBlockTitleProps extends RouteComponentProps {
 const ProjectsBlockTitle: React.FC<ProjectsBlockTitleProps> = (props) => {
   const { scroll, screenHeight, prevBlockHeight } = props;
   const currentScroll = scroll - screenHeight * 8 - prevBlockHeight + 1;
-  console.log('currentScroll: ', currentScroll);
   const opacity = 3 - currentScroll / screenHeight;
   const isHidden = currentScroll < 0 || currentScroll / screenHeight >= 3;
   const display = isHidden ? 'none' : '';
