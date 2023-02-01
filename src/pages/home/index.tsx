@@ -1,23 +1,16 @@
-import React, { memo, useState } from 'react';
-import { navigate, RouteComponentProps } from '@reach/router';
-import {
-  ContactBlock,
-  ContactBlockTitle,
-  HeaderBlock,
-  ProjectsBlock,
-  ProjectsBlockTitle,
-  SkillsBlock,
-  SkillsBlockTitle,
-} from './components';
-import { useWindowScroll, useWindowSize } from 'react-use';
+import React, { memo, useState } from "react";
+import { RouteComponentProps } from "@reach/router";
+import { ContactBlock, ContactBlockTitle, HeaderBlock, ProjectsBlock, ProjectsBlockTitle, SkillsBlock, SkillsBlockTitle } from "./components";
+import { useWindowScroll, useWindowSize } from "react-use";
 
 interface HomeProps extends RouteComponentProps {}
 
 const Home: React.FC<HomeProps> = () => {
   const { y: scroll } = useWindowScroll();
   const { height: screenHeight, width: screenWidth } = useWindowSize();
-  const isMobile = screenWidth <= 576;
   const [projectsBlockHeight, setProjectsBlockHeight] = useState<number>();
+  const isMobile = screenWidth <= 576;
+  const handleProjectsBlockHeight = (value) => setProjectsBlockHeight(value);
 
   if (isMobile) {
     return (
@@ -37,17 +30,9 @@ const Home: React.FC<HomeProps> = () => {
       <SkillsBlock scroll={scroll} screenHeight={screenHeight} />
 
       <ProjectsBlockTitle scroll={scroll} screenHeight={screenHeight} />
-      <ProjectsBlock
-        scroll={scroll}
-        screenHeight={screenHeight}
-        setProjectsBlockHeight={(value) => setProjectsBlockHeight(value)}
-      />
+      <ProjectsBlock scroll={scroll} screenHeight={screenHeight} setProjectsBlockHeight={handleProjectsBlockHeight} />
 
-      <ContactBlockTitle
-        scroll={scroll}
-        screenHeight={screenHeight}
-        prevBlockHeight={projectsBlockHeight || 0}
-      />
+      <ContactBlockTitle scroll={scroll} screenHeight={screenHeight} prevBlockHeight={projectsBlockHeight || 0} />
       <ContactBlock />
     </div>
   );

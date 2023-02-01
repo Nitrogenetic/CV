@@ -1,2 +1,2 @@
-export { default as SkillsBlockMeteors } from './SkillsBlockMeteors';
-export { default as SkillsBlockAstronauts } from './SkillsBlockAstronauts';
+export { default as SkillsBlockMeteors } from "./SkillsBlockMeteors";
+export { default as SkillsBlockAstronauts } from "./SkillsBlockAstronauts";

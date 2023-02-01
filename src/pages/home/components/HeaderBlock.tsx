@@ -1,6 +1,6 @@
-import React, { memo } from 'react';
-import { RouteComponentProps } from '@reach/router';
-import AnimatedCursor from 'react-animated-cursor';
+import React, { memo } from "react";
+import { RouteComponentProps } from "@reach/router";
+import AnimatedCursor from "react-animated-cursor";
 
 interface HeaderBlockProps extends RouteComponentProps {
   scroll: number;
@@ -11,7 +11,13 @@ const HeaderBlock: React.FC<HeaderBlockProps> = (props) => {
   const { scroll, screenHeight } = props;
   const opacity = 1 - scroll / screenHeight;
   const isHidden = scroll / screenHeight >= 1;
-  const display = isHidden ? 'none' : '';
+  const display = isHidden ? "none" : "";
+  const backgroundImage = 'url("images/background.png")';
+  const isCursorVisible = display !== "none";
+  const cursorInnerStyle = {
+    backgroundColor: "white",
+    mixBlendMode: "difference",
+  };
 
   return (
     <div
@@ -19,20 +25,10 @@ const HeaderBlock: React.FC<HeaderBlockProps> = (props) => {
       style={{
         opacity,
         display,
-        backgroundImage: 'url("images/background.png")',
+        backgroundImage,
       }}
     >
-      {display !== 'none' && (
-        <AnimatedCursor
-          innerSize={'15vw'}
-          outerSize={0}
-          innerScale={4}
-          innerStyle={{
-            backgroundColor: 'white',
-            mixBlendMode: 'difference',
-          }}
-        />
-      )}
+      {isCursorVisible && <AnimatedCursor innerSize={"15vw"} outerSize={0} innerScale={4} innerStyle={cursorInnerStyle} />}
       <div className="absolute-center text-5vw text-[#ffffff] text-opacity-87 text-center text-shadow-xl">
         Vladislav Gorbach`s
         <br />
